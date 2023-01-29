@@ -5,7 +5,7 @@ function MovieDetail({coverImg, title, rating, code, description, genres}) {
     console.log(genres);
     return(
         <div className={styles.main}>
-            <img src={coverImg} alt="img"/>
+            <img className={styles.img} src={coverImg} alt="img"/>
             <h1>{title}</h1>
             <div className={styles.ratingAndGenres}>
                 <div className={styles.ratingContainer}>
@@ -14,8 +14,8 @@ function MovieDetail({coverImg, title, rating, code, description, genres}) {
                 </div>
                 <div className={styles.genreContainer}>
                     <span>Genres : </span>
-                        {genres && genres.map((genre) =>
-                            <span className={styles.list} key={genre}>{genre}, </span>)
+                        {genres && genres.map((genre, index) =>
+                            <span className={styles.list} key={genre}>{genre}{genres.length-1 !== index ? <span>,&nbsp;</span> : null} </span>)
                         }
                 </div>
             </div>

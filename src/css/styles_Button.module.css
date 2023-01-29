@@ -1,0 +1,14 @@
+.pagebtn{
+    text-align: center;
+    font-size: 22px;
+}
+.arrowbtn{
+    background-color: transparent;
+    color:white;
+    margin:7px;
+    height:30px;
+    width:30px;
+}
+.arrowbtn:hover{
+    cursor: pointer;
+}

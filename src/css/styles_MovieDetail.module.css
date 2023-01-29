@@ -1,7 +1,10 @@
 .main{
     text-align: center;
 }
-
+.img{
+    width:50vw;
+    height:35vh;
+}
 .ratingAndGenres{
     display: inline-block;
     margin:4vw 0 15vw 0;
@@ -24,6 +27,7 @@
     width:90vw;
     height: 25vh;
 }
+
 .description{
     display: inline-block;
     width:90vw;
@@ -31,4 +35,18 @@
     font-size: 2vh;
     line-height: 2vh;
     margin-bottom: 10vh;
+}
+@media ( min-width: 768px ) {
+    .img{
+        width:25vw;
+        height: 60vh;
+    }
+    .trail{
+        width:80vw;
+        height: 55vh;
+    }
+    .description{
+        width:80vw;
+        line-height: 3vh;
+    }
 }

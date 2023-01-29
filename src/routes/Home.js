@@ -1,6 +1,8 @@
 import Movies from "../components/Movies";
+import PageBtn from "../components/PageButton";
 import {useEffect, useState} from "react";
 import styles from "../css/styles_Home.module.css";
+import {Link} from "react-router-dom";
 
 
 function Home(){
@@ -20,13 +22,13 @@ function Home(){
     }
     useEffect(() => {
         getMovies();
-    }, [])
+    }, [pages])
     console.log(movies);
     return(
         <div className={styles.home}>
-            <div className={styles.title}>
+            <Link to={'/'} style={{textDecoration:"none", color:"white"}}><div className={styles.title}>
                 SC Movie
-            </div>
+            </div></Link>
             <div className={styles.list}>
                 {loading ?
                     <h1>Loading...</h1>
@@ -42,6 +44,7 @@ function Home(){
                     )}
                     </div>}
             </div>
+            <PageBtn pages={pages} setPages={setPages} setLoading={setLoading}/>
             <div className={styles.by}>
                 {loading ? null:
                     <span>by <a className={styles.link} href={"https://github.com/minseoky/MovieApp-Powered_by_react"}>minseoky</a>
@@ -53,6 +56,7 @@ function Home(){
                 </span>
                 }
             </div>
+
         </div>
     )
 }

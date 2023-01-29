@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import styles from "../css/styles_Detail.module.css";
 import MovieDetail from "../components/MovieDetail";
@@ -20,9 +20,9 @@ function Detail() {
     console.log(details);
     return (
         <div className={styles.detail}>
-            <div className={styles.title}>
+            <Link to={'/'} style={{textDecoration:"none", color:"white"}}><div className={styles.title}>
                 SC Movie
-            </div>
+            </div></Link>
             {loading ? <h1>Loading...</h1> :
                 <MovieDetail
                     coverImg={details.medium_cover_image}

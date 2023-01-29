@@ -9,6 +9,21 @@
     width: 30vw;
     height: 25vh;
 }
+.img:hover{
+    transform: scale(1.05);
+    transition: all 0.2s linear;
+}
+@media ( min-width: 768px ) {
+    .movies{
+        height: 40vh;
+        width:15vw;
+        margin:0.5vw;
+    }
+    .img{
+        height: 30vh;
+        width: 15vw;
+    }
+}
 .movies a{
     color:white;
     font-size:2vh;
@@ -16,6 +31,9 @@
     line-height: 2vh;
     text-align: left;
     float: left;
+}
+.movies a:hover{
+    color:red;
 }
 .onlyWeb{
     display: none;
